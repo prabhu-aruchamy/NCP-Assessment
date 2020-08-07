@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+        <title>Sorting</title>
+    </head>
+    <script type="text/javascript">
+    function simpl()
+    {
+    var n;
+    n=parseFloat(prompt("Please Enter Number of names"));    
+    var str = []; // Initialize array!
+
+    for (i = 0; i < n; i++) {
+    str[i]=(prompt("Please enter the name:")); 
+    
+    }
+    str.sort();
+    for (i = 0; i < n; i++) {
+    document.write(str[i]+" ");
+    }
+        
+    }
+    </script>
+    <body>
+    <center>
+        <input type="button" value="string sort on names" onclick="simpl()" />
+        </center>
+    </body>
+</html>

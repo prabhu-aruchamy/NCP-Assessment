@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fib</title>
+</head>
+<body>
+    <h1 id="fibo">Fibonaaci Series</h1>
+</body>
+<script>
+
+
+    var looping = function (n) {
+            var output=" "
+            var a = 0, b = 1, f = 1;
+            output+=a+", "
+            output+=b+", "
+            for (var i = 2; i <= n; i++) {
+                f = a + b;
+                output+=f+", "
+                a = b;
+                b = f;
+            }
+            return output;
+        };
+    var n= parseInt(prompt("Please Enter N value"));
+    document.getElementById("fibo").innerText=looping(n)
+
+</script>
+</html>
