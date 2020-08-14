@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="button" onclick="generate()" value="Generate">
+
+    <ul id="list">
+
+    </ul>
+</body>
+
+<script>
+
+    function generate() {
+        
+        output=""
+        for(var i=1;i<100;i++)
+        {
+            if(i%15==0)
+            {
+                output+="<li>"+i+":"+"FizzBuzz</li>\n"
+            }
+            else if(i%3==0)
+            {
+                output += "<li>" + i + ":" + "Fizz</li>\n"
+            }
+            else if(i%5==0){
+                output += "<li>" + i + ":" + "Buzz</li>\n"
+            }
+        }
+        document.getElementById("list").innerHTML=output
+    }
+</script>
+
+</html>

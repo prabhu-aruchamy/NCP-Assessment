@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="dateed" type="text">
+    <input id="date" type="button" onclick="validate()" value="Validate">
+    <p style="color: red;" id="answer"></p>
+</body>
+<script>
+
+    function validate()
+    {
+        var date=document.getElementById("dateed").value
+        var rgexp = /^(0[1-9]|1\d|2\d|3[01])\-(0[1-9]|1[0-2])\-(19|20)\d{2}$/;
+        var isValidDate = rgexp.test(date);
+        if(isValidDate)
+        {
+            document.getElementById("answer").innerText="Valid"
+            document.getElementById("answer").style.color="green";
+        }
+        else{
+             document.getElementById("answer").innerText = "Invalid"
+            document.getElementById("answer").style.color = "red";
+        }
+    }
+</script>
+</html>
