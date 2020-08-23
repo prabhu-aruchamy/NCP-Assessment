@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prabhu</title>
+</head>
+
+
+
+<body>
+    <img src="" id="image" style="height: 300px; width: auto;">
+    <h3 id="desc"></h3>
+
+    <button id="gen" onclick="thefunc()">Randomize</button>
+    <table border="1px" style="border-style: dotted;">
+        <tr>
+            <td>Computer</td>
+            <td id="1">0</td>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td id="2">0</td>
+        </tr>
+        <tr>
+            <td>Keyboard</td>
+            <td id="3">0</td>
+        </tr>
+        <tr>
+            <td>Printer</td>
+            <td id="4">0</td>
+        </tr>
+        <tr>
+            <td>Camera</td>
+            <td id="5">0</td>
+        </tr>
+        
+        
+        
+        
+    </table>
+
+    <script>
+        var n = {"1": 0,"2": 0,"3": 0,"4": 0,"5": 0,}
+
+        var texts = ["Computer", "Mouse", "Keyboard", "Printer", "Camera"]
+
+        var images = [
+            "https://5.imimg.com/data5/EF/RQ/MY-3030942/lenovo-desktop-computer-500x500.jpg",
+            "https://images-eu.ssl-images-amazon.com/images/I/41PF2-uVLBL._SY300_QL70_ML2_.jpg",
+            "https://images-na.ssl-images-amazon.com/images/I/81PLqxtrJ3L._SL1500_.jpg",
+            "https://5.imimg.com/data5/YX/JM/MY-12695138/computer-printer-500x500.jpg",
+            "https://m.media-amazon.com/images/I/4161GwR8l4L.jpg"
+            ]
+
+
+        function thefunc()
+        {
+            for(var i=0;i<10;i++)
+            {
+                setTimeout(function () {
+                    var rand = Math.floor(Math.random() * 5)
+                    if (document.getElementById(String(rand + 1)).innerText == "0") {
+                        document.getElementById(String(rand + 1)).innerText = "1"
+                        n[String(rand + 1)] = 1
+                    } else {
+                        document.getElementById(String(rand + 1)).innerText = String(parseInt(document.getElementById(String(rand + 1)).innerText) + 1)
+                        n[String(rand + 1)] = parseInt(document.getElementById(String(rand + 1)).innerText) + 1
+                    }
+                    document.getElementById('desc').innerText = texts[rand]
+                    document.getElementById("image").src = images[rand]
+                }, 2000 * i); 
+                
+                
+            }
+            
+        }
+    </script>
+</body>
+
+</html>
