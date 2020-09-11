@@ -1,0 +1,31 @@
+<?xml-stylesheet href="ncpxsl.xsl" type="text/xsl" ?>
+<!DOCTYPE survey
+[
+<!ELEMENT survey (isro,region,
+location,
+Featuretype,
+ROVdives,
+Areacovered,
+DepthRangesurveyed,
+Distancefromland,
+Shippingactivityproxy,
+Items)>
+<!ELEMENT isro (region,
+location,
+Featuretype,
+ROVdives,
+Areacovered,
+DepthRangesurveyed,
+Distancefromland,
+Shippingactivityproxy,
+Items)>
+<!ELEMENT  region(#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT Featuretype (#PCDATA)>
+<!ELEMENT ROVdives (#PCDATA)>
+<!ELEMENT Areacovered (#PCDATA)>
+<!ELEMENT DepthRangesurveyed (#PCDATA)>
+<!ELEMENT Distancefromland (#PCDATA)>
+<!ELEMENT Shippingactivityproxy (#PCDATA)>
+<!ELEMENT Items (#PCDATA)>
+]>
